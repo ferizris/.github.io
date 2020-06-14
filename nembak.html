@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="love.png">
+  <script type="text/javascript" src="jquery-3.5.1.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anu, Kamu...</title>
+
+  <style type="text/css">
+    @font-face {
+  font-family: msb;
+  src: url('montserrat-semibold.otf');
+}
+@font-face {
+  font-family: mb;
+  src: url('montserrat-bold.otf');
+}
+@font-face {
+  font-family: mr;
+  src: url('montserrat-regular.otf');
+}
+
+body{
+  /*background-image: linear-gradient(45deg, #ecf0f1, #bdc3c7);*/
+  background-color: #2d3436;
+  background-size: 1366px 768px;
+  font-family: msb;
+}
+.tanya{
+  margin-top: 250px;
+}
+.tanya div{
+  margin: 0 auto;
+  width: 400px;
+  height: 150px;
+  background-color: #bdc3c7;
+  text-align: center;
+  border-radius: 20px 0px 20px 0px;
+}
+.tanya p{
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+  font-size: 15px;
+}
+.tanya input{
+  border: none;
+  outline: none;
+  width: 290px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0px 0px 0px 10px;
+  background-color: white;
+  color: #2d3436;
+  font-family: msb;
+}
+.tanya button{
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  float: right;
+  margin: 10px 50px 0px 0px;
+  border-radius: 5px;
+  font-family: mb;
+  cursor: pointer;
+  color: white;
+  background-color: #1abc9c;
+  transition: 0.1s;
+}
+.tanya button:hover{
+  background-color: #34495e;
+  transition: 0.1s;
+}
+.tanya button:active{
+  background-color: #c0392b;
+  transition: 0s;
+}
+.nembak{
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+.nembak p:nth-child(1){
+  font-size: 30px;
+  color: white;
+  margin-top: 70px;
+}
+.nembak p:nth-child(2){
+  font-size: 15px;
+  margin-top: -25px;
+  color: white;
+  margin-bottom: 120px;
+}
+.nembaklo{
+  margin: 0 auto;
+  width: 400px;
+  height: 150px;
+  background-color: #ecf0f1;
+  border-radius: 20px 0px 20px 0px;
+  transition: 0.4s;
+  outline: none;
+}
+.nembaklo:hover{
+  border-radius: 0px 20px 0px 20px;
+  transition: 0.4s;
+}
+#namalo{
+  text-transform: capitalize;
+}
+#teks{
+  padding-top: 40px;
+  font-size: 15px;
+  color: #2f3640;
+}
+.nembaklo button{
+  border: none;
+  outline: none;
+  width: 140px;
+  height: 40px;
+  font-family: mb;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin: 0px 5px 0px 5px;
+  border-radius: 5px;
+}
+#mau{
+  background-color: #1abc9c;
+}
+#gamau{
+  background-color: #e74c3c;
+}
+#mau:hover{
+  background-color: #2de4c0;
+  letter-spacing: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+#gamau:hover{
+  background-color: #ff7263;
+  letter-spacing: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+#mau:active, #gamau:active{
+  background-color: #2c3e50;
+  transition: 0s;
+}
+.kotakmau{
+  display: none;
+  text-align: center;
+  color: white;
+  margin: 210px 0px 0px 0px;
+}
+.accept{
+  width: 400px;
+  height: 200px;
+  background-image: linear-gradient(225deg, #12cbc4, #0652dd);
+  color: white;
+  margin: 0 auto;
+  border-radius: 0px 20px 0px 20px;
+  transition: 0.4s;
+}
+.accept:hover{
+  border-radius: 20px 0px 20px 0px;
+  transition: 0.4s;
+}
+.accept p:nth-child(1){
+  padding-top: 60px;
+  font-size: 30px;
+}
+.accept p:nth-child(2){
+  margin-top: -20px;
+}
+.accept a{
+  font-size: 10px;
+  color: rgb(255,255,255,0.5);
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 5px;
+  float: right;
+  margin: 30px 20px 0px 0px;
+}
+.close{
+  width: 200px;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+.cls{
+  font-family: msb;
+  width: 22px;
+  height: 22px;
+  background-color: #2f3640;
+  color: white;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  margin-top: 9px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cls2{
+  cursor: pointer;
+  text-decoration: none;
+  color: #2f3640;
+}
+.close:hover{
+  letter-spacing: 5px;
+  transition: 0.4s;
+}
+.cls:hover{
+  transform: rotate(360deg);
+  transition: 0.4s;
+}
+.tolak{
+  width: 400px;
+  height: 205px;
+  background-color: #ecf0f1;
+  margin: 0 auto;
+  border-radius: 0px 20px 0px 20px;
+  color: #2f3640;
+  font-size: 15px;
+  transition: 0.4s;
+  display: none;
+}
+.tolak:hover{
+  border-radius: 20px 0px 20px 0px;
+  transition: 0.4s;
+}
+#saa{
+  padding: 10px 0px 0px 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.kiri{
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 10px 0px 0px 20px;
+  text-transform: capitalize;
+}
+.kanan{
+  width: 180px;
+  height: 200px;
+  float: right;
+  margin: 10px 0px 0px 0px;
+  text-transform: capitalize;
+}
+.tolak p{
+  margin-bottom: -10px;
+  transition: 0.1s;
+}
+.tolak p:hover{
+  letter-spacing: 2px;
+  transition: 0.1s;
+}
+.tolak input{
+  cursor: pointer;
+}
+.tolak button{
+  width: 100px;
+  height: 35px;
+  background-color: #1abc9c;
+  border: 3px #ecf0f1 solid;
+  outline: none;
+  font-family: mb;
+  float: right;
+  border-radius: 8px;
+  margin: -46px 30px 0px 0px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tolak button:hover{
+  background-color: #e74c3c;
+  transition: 0.2s;
+}
+.tolak button:active{
+  background-color: #2c3e50;
+  transition: 0s;
+}
+.sedboi{
+  text-align: center;
+  margin: 250px 0px 0px 0px;
+  font-size: 40px;
+  color: #ecf0f1;
+  cursor: pointer;
+  display: none;
+}
+.sedboi p:nth-child(1){
+  font-size: 100px;
+}
+.sedboi p:nth-child(2){
+  margin: -70px 0px 0px 0px;
+  transition: 0.2s;
+  text-transform: capitalize;
+}
+.sedboi p:nth-child(2):hover{
+  letter-spacing: 10px;
+  transition: 0.2s;
+}
+  </style>
+</head>
+
+<body>
+	<div class="tanya">
+    <div>
+      <p>Masukkan Nama "Panggilan" Kamu</p>
+      <input type="text" id="nama">
+      <br>
+      <button type="button" id="btn-nama">Ok</button>
+    </div>
+  </div>
+
+  <div class="kotakmau">
+    <div class="accept">
+      <p>Asiikkkkk...</p>
+      <p>Nanti malem jalan yuk? :*</p>
+      <a href="#" id="ig">@Ferizris</a>
+    </div>
+    <div class="close">
+      <button id="close" class="cls">X</button>
+      <a id="close2" class="cls2">Close</a>
+    </div>
+  </div>
+
+  <div class="nembak">
+    <p>Nembak Nih Gua</p>
+    <p>Biar Kayak anak IT banget ceritanya</p>
+    <div class="nembaklo">
+      <p id="teks"><span id="namalo"></span>, Lu mao gak jadi pacar gue?</p>
+      <button type="button" id="mau">Mau</button>
+      <button type="button" id="gamau">Gak</button>
+    </div>
+  </div>
+
+  <div class="tolak">
+    <p id="saa">Kenapa Gak Mau?</p>
+    <div class="kiri">
+      <p><input type="checkbox">Lo jelek</p>
+      <p><input type="checkbox">Lo miskin</p>
+      <p><input type="checkbox">Titid lo kecil</p>
+      <p><input type="checkbox">Titid lo kegedean</p>
+      <p><input type="checkbox">Lo anjing</p>
+    </div>
+    <div class="kanan">
+      <p><input type="checkbox">Homo</p>
+      <p><input type="checkbox">gila</p>
+      <p><input type="checkbox">suka coli</p>
+      <p><input type="checkbox">terlalu ganteng</p>
+      <p><input type="checkbox">wibu</p>
+    </div>
+
+    <br>
+    <button type="button" id="btn-tolak">Ok</button>
+  </div>
+
+  <div class="sedboi">
+    <p>:'(</p>
+    <p><span id="namalo2"></span> Jahat!!</p>
+  </div>
+</body>
+
+<footer>
+	<script>
+   $(document).ready(function(){
+  $("#btn-nama").click(function(event){
+    var nama = $("#nama").val();
+    if(nama==""){alert("Ketik Namanya Dong");}
+    else{
+      $(".tanya").hide();
+      $(".nembak").fadeIn();
+    }
+
+    $("#namalo").text(nama);
+  });
+  $("#mau").mouseenter(function(){
+    $("#mau").css("width","180px");
+    $("#gamau").css("width","100px");
+    $("#gamau").css("transition","0.2s");
+  });
+  $("#gamau").mouseenter(function(){
+    $("#gamau").css("width","180px");
+    $("#mau").css("width","100px");
+    $("#mau").css("transition","0.2s");
+  });
+  $("#mau").mouseleave(function(){
+    $("#mau").css("width","140px");
+    $("#gamau").css("width","140px");
+    $("#gamau").css("transition","0.2s");
+  });
+  $("#gamau").mouseleave(function(){
+    $("#gamau").css("width","140px");
+    $("#mau").css("width","140px");
+    $("#mau").css("transition","0.2s");
+  });
+
+  $(".accept").mouseenter(function(){
+    $("#ig").css("margin","30px 280px 0px 0px");
+    $("#ig").css("transition", "0.3s");
+  });
+  $(".accept").mouseleave(function(){
+    $("#ig").css("margin","30px 20px 0px 0px");
+    $("#ig").css("transition", "0.3s");
+  });
+
+  $("#mau").click(function(event){
+    $(".nembak").hide();
+    $(".kotakmau").fadeIn();
+  });
+  $("#close").click(function(event){
+    $(".kotakmau").hide();
+    $(".nembak").fadeIn();
+  });
+  $("#close2").click(function(event){
+    $(".kotakmau").hide();
+    $(".nembak").fadeIn();
+  });
+
+  $("#gamau").click(function(event){
+    $(".tolak").fadeIn();
+  });
+
+  $("#btn-tolak").click(function(event){
+    $(".nembak").hide();
+    $(".tolak").hide();
+    $(".sedboi").fadeIn();
+
+    var namaa = $("#nama").val();
+    $("#namalo2").text(namaa);
+  });
+})
+ 
+  </script>
+</footer>
+</html>
